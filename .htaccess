@@ -1,0 +1,26 @@
+# Pretty URLs based on Noah Hendrix's Tutorial
+# http://net.tutsplus.com/tutorials/other/using-htaccess-files-for-pretty-urls/
+# 
+# The Architect CMS URL Handler
+# Version 1.0 
+# Developed by: Joshua Moor
+# Last Modified: 2/27/2013
+#
+
+# Follow sumbolic links.
+Options +FollowSymLinks 
+
+# Enable the rewrite engine. Required for the handler to work correctly.
+RewriteEngine On
+
+#enable existing php items sans php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Check for existing items and prevent rewriting in the case of existing items.
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+
+# Redirect to handler. This path will need to be updated based on the installation config
+RewriteRule ^.*$ ./index.php  

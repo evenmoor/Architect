@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* 
+	CSS Document for Architect's Cool Blue theme
+	Design by: Joshua Moor
+	Development by: Joshua Moor
+	
+	Last Modified: 9/2/2014
+	Last Validated:
+	Result:
+*/
+
+/* CSS Reset V3.1 */
+article, aside, figure, footer, header, hgroup, nav, section{display:block;}
+a, abbr, acronym, address, applet, article, aside, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var{padding:0; margin:0;}
+body{font-size:62.5%;}
+img{border:none;}
+a{outline:none;}
+table{border-collapse:collapse; border-spacing:0;}
+
+/* General Styles */
+/* Blocks */
+body, html{height:100%; padding:0; margin:0;}
+body{background:#52a3ff; font-family:Arial, Helvetica, sans-serif; 
+background: -moz-linear-gradient(left, rgba(82,163,255,1) 0%, rgba(58,116,181,1) 5%, rgba(58,116,181,1) 95%, rgba(82,163,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(82,163,255,1)), color-stop(5%,rgba(58,116,181,1)), color-stop(95%,rgba(58,116,181,1)), color-stop(100%,rgba(82,163,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(82,163,255,1) 0%,rgba(58,116,181,1) 5%,rgba(58,116,181,1) 95%,rgba(82,163,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(82,163,255,1) 0%,rgba(58,116,181,1) 5%,rgba(58,116,181,1) 95%,rgba(82,163,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(82,163,255,1) 0%,rgba(58,116,181,1) 5%,rgba(58,116,181,1) 95%,rgba(82,163,255,1) 100%); /* IE10+ */
+background: linear-gradient(to right, rgba(82,163,255,1) 0%,rgba(58,116,181,1) 5%,rgba(58,116,181,1) 95%,rgba(82,163,255,1) 100%); /* W3C */}
+	
+	#page, #header, #sub_navigation, .content, #footer{position:relative; float:left; clear:both; width:100%;}
+	#user_navigation, #primary_navigation, #version, #footer_navigation{float:left; clear:both;}
+	#section_navigation{float:left; width:18%; margin-right:2%;}
+	
+	.tutorial{float:left; clear:both; width:93%; margin:5px 2.5%; background:#c9e2ff; padding:5px 1%;}
+	.tutorial .transcript{float:left; clear:both; width:95%; background:#fff; padding:5px 2.5%; margin:5px 0;}
+	.tutorial iframe.video{float:left; clear:both; width:95%; height:300px; margin:5px 2.5%}
+	
+	#help_link_div{position:absolute; padding:10px; border-radius:5px; border:2px solid #52a3ff; z-index:1000; background:#fff; max-width:10%; 
+	box-shadow:#000 2px 2px 4px;}
+	#page{min-height:100%; width:90%; margin:0 5%; background:#fff; float:left; clear:both;}
+		#header{height:126px;}
+			#user_navigation{position:absolute; width:90%; right:10px; top:8px; font-size:1.2em; text-align:right; z-index:100;}
+			#primary_navigation{position:absolute; width:90%; left:50px; bottom:0px; z-index:100; font-size:1.8em;}
+		#sub_navigation{background:#52a3ff; color:#fff; font-size:1.2em;}
+		#section_navigation{background:#52a3ff; color:#fff; font-size:1.5em; padding:20px 0 20px 0;}
+		.content{font-size:1.2em; line-height:1.5em; padding:10px 1%; width:98%;}
+		.content.with_section_nav{clear:none; width:78%;}
+			.single_column{width:98%; float:left; clear:both; padding:5px 1%; overflow:hidden;}
+			.dual_column{width:48%; float:left; padding:5px 1%; overflow:hidden;}
+			.tri_column{width:32%; float:left; padding:5px .5%; overflow:hidden;}
+			.quad_column{width:23%; float:left; padding:5px .5%; margin:0 .5% 10px .5%; background:#eee; overflow:hidden;}
+			.left_column{clear:left;}
+		#footer{background:#ffffff; width:100%; margin-top:20px; font-size:1em; min-height:20px;}
+			#version{position:absolute; width:50%; left:0px;}
+			#footer_navigation{text-align:right; position:absolute; right:0%; width:50%;}
+		
+/* Images */
+img#title{position:absolute; left:23px; top:18px; z-index:50;}
+
+/* Navigation */
+.content a.button{background:#52a3ff; color:#fff; font-weight:bold; padding:5px;
+border-radius:2px;
+transition:color 0.5s, background 0.5s;}
+.content a.button:hover{background:#fff; color:#000;}
+
+#user_navigation ul{list-style:none; line-height:1em; float:right; clear:both;}
+#user_navigation li{float:left;}
+#user_navigation a{float:left; clear:both; color:#000000; text-decoration:none; padding:0 5px;
+transition:color 0.5s;}
+#user_navigation a:hover{color:#52a3ff;}
+
+#primary_navigation ul{list-style:none; float:left; clear:both;}
+#primary_navigation li{float:left;}
+#primary_navigation a{float:left; clear:both; color:#000000; text-decoration:none; height:27px; line-height:27px; padding:0 10px; display:inline-block;
+transition:color 0.5s, background 0.5s;}
+#primary_navigation a:hover{color:#fff; background:#3a75b6;}
+#primary_navigation li.active a{color:#fff; background:#52a3ff;}
+
+#sub_navigation ul{list-style:none; padding:12px 4px; float:left; clear:both;}
+#sub_navigation li{float:left;}
+#sub_navigation a{float:left; clear:both; text-decoration:none; color:#fff; padding:0px 5px;
+transition:color 0.5s;}
+#sub_navigation a:hover{color:#444;}
+
+#section_navigation ul{list-style:none; float:left; clear:both; width:100%;}
+#section_navigation li{float:left; clear:both; width:100%;}
+#section_navigation a{float:left; clear:both; width:90%; padding:0 5%; color:#ffffff; text-decoration:none;
+transition:color 0.5s;}
+#section_navigation a:hover{color:#444;}
+
+#footer_navigation ul{list-style:none; float:right; clear:both;}
+#footer_navigation li{float:left;}
+#footer_navigation a{float:left; clear:both; color:#000; text-decoration:none; padding:0 5px;
+transition:color 0.5s;}
+#footer_navigation a:hover{color:#52a3ff;}
+
+/* Text */
+#help_link_div h1, #help_link_div h2, #help_link_div h3, #help_link_div h4, #help_link_div h5, #help_link_div h6{font-weight:normal; font-size:1.4em; padding:0 0 0 2px; text-align:center;}
+#help_link_div p{font-size:1em; padding:2px 0;}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{font-weight:normal; font-size:2em; padding:5px 0;}
+.content h2{font-size:1.6em;}
+.content h3, .content h4, .content h5, .content h6{font-size:1.3em;}
+.content p{padding:5px 0;}
+.content a{color:#06F; text-decoration:none;
+transition:color 0.5s;}
+.content a:hover{color:#444;}
+.content ol, .content ul{padding:5px 0 5px 15px;}
+.content ol ol, .content ol ul, .content ul ul, .content ul ol{padding:1px 0 1px 10px;}
+.content table.styled_table{border:2px solid #000;}
+.content table.styled_table tr, .content table.styled_table td, .content table.styled_table th{border:1px solid #000;}
+.content table.styled_table th{padding:2px 3px; color:#fff; background:#000;}
+.content table.styled_table td{padding:2px 3px;}
+.content ul.warning_list{background:#ff9; list-style-type:square; font-size:1.2em; font-weight:bold; color:#c00; list-style-position:inside; padding:0; margin-bottom:10px;}
+.content ul.warning_list li{padding:5px 20px;}
+.content ul.warning_list a{color:#c00; text-decoration:underline;}
+.content ul.warning_list a:hover{text-decoration:none;}
+
+.tutorial h2{text-align:center;}
+.tutorial p.disable_tutorial_note{text-align:center; font-size:.8em;}
+
+p.error{background:#900; text-align:center; font-weight:bold; color:#fff;}
+
+#version p{padding:0 5px;}
+
+/* General Classes */
+.centered{text-align:center;}
+.right{text-align:right;}
+div.table_row{width:100%; float:left; clear:both; background:#fff; font-size:1em;}
+div.table_row.odd{background:#ccc;}
+		span.table_column{float:left;}
+
+.data_field{display:none !important;}
+
+h6.warning{background:#ffffcc; text-align:center; font-weight:bold; padding:.5em; margin-bottom:10px;}
+
+/* Form Elements */
+.content textarea{width:50%; min-width:200px; min-height:100px;}
+.quad_column textarea{width:98%; min-width:200px; min-height:100px;}
+.content textarea.html_area{width:100%; height:400px;}
+.CodeMirror{border:1px solid #000000; font-size:1.2em;}
+.content input[type="text"], .content input[type="password"]{width:50%; min-width:200px;}
+.content input[type="submit"], .content input[type="button"]{background:#52a3ff; color:#fff; border:none; padding:2px 4px; cursor:pointer; border-radius:2px; font-weight:400;
+transition:color 0.5s, background 0.5s;}
+.content input[type="submit"]:hover, .content input[type="button"]:hover{background:#3a75b6;}
+.content input[type="submit"]:active, .content input[type="button"]:active{background:#fff; color:#000;}
+.content select{width:50%; min-width:200px;}
+.quad_column input[type="text"], .quad_column input[type="password"]{width:98%; min-width:200px;}
+.quad_column select{width:98%; min-width:200px;}
+.transparent{background:url(../images/transparent_background.png) left top repeat;}
+
+/* Screen Specific Styles */
+form#modify_menu{border:1px solid #52a3ff; float:left; clear:both; position:absolute; z-index:100; background:#ccc; padding:5px 10px; left:50%;}
+
+.whoah{float:left; clear:both; width:100%; background:rgba(0, 0, 0, .05); padding:5px; margin:10px 0; border:1px #F00 dashed;}
+.whoah img{float:right; margin:5px 0 5px 10px;}

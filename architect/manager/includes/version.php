@@ -1,0 +1,1 @@
+<p>Architect Version: <? echo $site_settings['version']; ?></p>
